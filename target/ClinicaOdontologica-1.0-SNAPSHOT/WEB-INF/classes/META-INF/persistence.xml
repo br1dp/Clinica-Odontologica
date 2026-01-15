@@ -13,8 +13,8 @@
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ClinicaOdonto?serverTimezone=UTC"/>
-            <property name="jakarta.persistence.jdbc.user" value="root"/>
-            <property name="jakarta.persistence.jdbc.password" value="bruno123!"/>
+            <property name="jakarta.persistence.jdbc.user" value="brunodp"/>
+            <property name="jakarta.persistence.jdbc.password" value="Bruno123!"/>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 
             <property name="eclipselink.target-database" value="MySQL"/>
