@@ -50,6 +50,8 @@ public class PacienteServlet extends HttpServlet {
         String telefono = request.getParameter("telefono");
         String direccion = request.getParameter("direccion");
         String fechaNac = request.getParameter("fechaNac");
+        String afeccion = request.getParameter("afeccion");
+        
         int tieneOs = 0;
         
         if(request.getParameter("tieneOs") != null){
@@ -101,7 +103,7 @@ public class PacienteServlet extends HttpServlet {
             responsable.setTipoResp(tipoResp);
         }
 
-        cL.crearPaciente(dni, nombre, apellido, telefono, direccion, fechaNac, tieneOs, tipoSangre, responsable);
+        cL.crearPaciente(dni, nombre, apellido, telefono, direccion, afeccion, fechaNac, tieneOs, tipoSangre, responsable);
 
         Mensaje mensaje = cL.crearMensaje("Paciente guardado", "El paciente fue guardado exitosamente en la base de datos.");
         session.setAttribute("mensaje", mensaje);

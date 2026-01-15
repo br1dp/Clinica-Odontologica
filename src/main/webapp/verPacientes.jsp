@@ -22,11 +22,11 @@
                     <thead>
                         <tr>
                             <th>DNI</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
+                            <th>Nombre y apellido</th>
                             <th>Telefono</th>
                             <th>Direccion</th>
                             <th>Fecha Nacimiento</th>
+                            <th>Afeccion</th>
                             <th>Obra Social</th>
                             <th>Tipo de sangre</th>
                             <th>Responsable</th>
@@ -36,11 +36,11 @@
                     <tfoot>
                         <tr>
                             <th>DNI</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
+                            <th>Nombre y apellido</th>
                             <th>Telefono</th>
                             <th>Direccion</th>
                             <th>Fecha Nacimiento</th>
+                            <th>Afeccion</th>
                             <th>Obra Social</th>
                             <th>Tipo de sangre</th>
                             <th>Responsable</th>
@@ -59,11 +59,11 @@
                         %>
                         <tr>
                             <td><%= pac.getDni()%></td>
-                            <td><%= pac.getNombre()%></td>
-                            <td><%= pac.getApellido()%></td>
+                            <td><%= pac.getNombre()%>, <%= pac.getApellido()%></td>
                             <td><%= pac.getTelefono()%></td>
                             <td><%= pac.getDireccion()%></td>
                             <td><%= pac.getFechaNac()%></td>
+                            <td><%= pac.getAfeccion()%></td>
                             <% if (pac.isTieneOs()) {%>
                             <td>Si</td> <% } else { %>
                             <td>No</td> <% }%>

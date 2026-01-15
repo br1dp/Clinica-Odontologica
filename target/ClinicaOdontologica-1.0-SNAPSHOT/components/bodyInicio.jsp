@@ -77,7 +77,7 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Acciones:</h6>
                             <% if (usuario.getRol().equals("ODONTOLOGO")) { %>
-                            <a class="collapse-item" href="utilities-color.html">Ver Pacientes</a>
+                            <a class="collapse-item" href="TurnoServlet">Ver Turnos</a>
                             <% } else { %>
                             <a class="collapse-item" href="altaPaciente.jsp">Crear Pacientes</a>
                             <a class="collapse-item" href="MenuTurnoServlet">Asignar Turnos</a>

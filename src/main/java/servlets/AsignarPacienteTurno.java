@@ -55,8 +55,7 @@ public class AsignarPacienteTurno extends HttpServlet {
         
         cL.editarPaciente(pacienteTurno);
         
-        Mensaje mensaje = cL.crearMensaje("Gestion de turnos", "Al paciente "+pacienteTurno.getDni()+", "+pacienteTurno.getNombre()+" "+pacienteTurno.getApellido()
-        +" se le asigno el turno exitosamente");
+        Mensaje mensaje = cL.crearMensaje("Gestion de turnos", "Turno asignado exitosamente al paciente "+pacienteTurno.getDni()+", "+pacienteTurno.getNombre()+" "+pacienteTurno.getApellido()+".");
         
         session.setAttribute("mensaje", mensaje);
         

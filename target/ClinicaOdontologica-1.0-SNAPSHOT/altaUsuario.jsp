@@ -80,7 +80,7 @@
                                                 Guardar Usuario
                                             </button>
                                         </div>
-
+                                        <p style="text-align: center;">Informacion: El usuario creado debe ser APROBADO por el administrador.</p>
                                     </form>
                                 </div>
 

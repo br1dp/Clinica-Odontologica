@@ -47,7 +47,6 @@ public class EditarTurno extends HttpServlet {
         
         String fechaTurno = request.getParameter("fechaTurno");
         String horaTurno = request.getParameter("horaTurno");
-        String afeccion = request.getParameter("afeccion");
 
         if (!fechaTurno.isEmpty()) {
             
@@ -62,11 +61,6 @@ public class EditarTurno extends HttpServlet {
             turnoEditar.setHoraTruno(horaTurno);
             
         }
-        if (!afeccion.isEmpty()) {
-            
-            turnoEditar.setAfeccion(afeccion);
-        }
-
         
         cL.editarTurno(turnoEditar);
         

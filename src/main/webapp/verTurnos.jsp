@@ -24,20 +24,24 @@
                         <tr>
                             <th>Fecha turno</th>
                             <th>Hora turno</th>
-                            <th>Afeccion</th>
                             <th>Paciente</th>
                             <th>Odontologo</th>
+                            <% if (usuario.getRol().equals("ODONTOLOGO")) {%>   
+                            <% } else {%>
                             <th style="width: 210px;">Accion</th>
+                            <% } %>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>Fecha turno</th>
                             <th>Hora turno</th>
-                            <th>Afeccion</th>
                             <th>Paciente</th>
                             <th>Odontologo</th>
+                            <% if (usuario.getRol().equals("ODONTOLOGO")) {%>   
+                            <% } else {%>
                             <th style="width: 210px;">Accion</th>
+                            <% } %>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -51,22 +55,22 @@
 
                         %>
                         <tr>
-                            <% 
-                                String diaTurno = String.valueOf(turno.getFechaTurno().getDayOfMonth());
+                            <%                                String diaTurno = String.valueOf(turno.getFechaTurno().getDayOfMonth());
                                 String mesTurno = String.valueOf(turno.getFechaTurno().getMonthValue());
                                 String anioTurno = String.valueOf(LocalDate.now().getYear());
                             %>
-                            <td><%= anioTurno+"-"+mesTurno+"-"+diaTurno %></td>
+                            <td><%= anioTurno + "-" + mesTurno + "-" + diaTurno%></td>
                             <td><%= turno.getHoraTruno()%></td>
-                            <td><%= turno.getAfeccion()%></td>
                             <% if (turno.getPaciente() != null) {%>
-                            <td><%= turno.getPaciente().getDni() + ", " + turno.getPaciente().getNombre() + ", " + turno.getPaciente().getApellido()%></td>
+                            <td><%= turno.getPaciente().getDni() + ", " + turno.getPaciente().getNombre() + " " + turno.getPaciente().getApellido()%></td>
                             <% } else { %>
                             <td>No asignado</td> <% }%>
                             <% if (turno.getOdontologo() != null) {%>
-                            <td><%= turno.getOdontologo().getNombre() + ", " + turno.getOdontologo().getApellido()%></td>
+                            <td><%= turno.getOdontologo().getNombre() + " " + turno.getOdontologo().getApellido()%></td>
                             <% } else { %>
                             <td>No asignado</td> <% }%>
+                            <% if (usuario.getRol().equals("ODONTOLOGO")) {%>   
+                            <% } else {%>
                             <td style="display:flex; width:230px;">
 
                                 <form name="eliminar" action="EliminarTurno" method="POST">
@@ -86,7 +90,7 @@
                             </td>
                         </tr>
                         <%
-
+                                    }
                                 }
 
                             }

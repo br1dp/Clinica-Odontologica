@@ -22,7 +22,9 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Asignar turno para el paciente <%= pacienteTurno.getDni() + ", " + pacienteTurno.getNombre() + " " + pacienteTurno.getApellido()%></h6>
+            <h5 class="m-0 font-weight-bold text-primary">Asignar turno para el paciente:  </h5>
+            <h6 class="m-0 font-weight-bold text-primary" style="color: black;">DNI: </h6><h6 class="m-0" style="color: black;"><%= pacienteTurno.getDni()%></h6>
+            <h6 class="m-0 font-weight-bold text-primary" style="color: black;">Nombre y apellido: </h6><h6 class="m-0" style="color: black;"><%= pacienteTurno.getNombre() + " " + pacienteTurno.getApellido()%></h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -31,7 +33,6 @@
                         <tr>
                             <th>Fecha turno</th>
                             <th>Hora turno</th>
-                            <th>Afeccion</th>
                             <th>Paciente</th>
                             <th>Odontologo</th>
                             <th style="width: 150px;">Accion</th>
@@ -41,7 +42,6 @@
                         <tr>
                             <th>Fecha turno</th>
                             <th>Hora turno</th>
-                            <th>Afeccion</th>
                             <th>Paciente</th>
                             <th>Odontologo</th>
                             <th style="width: 150px;">Accion</th>
@@ -65,7 +65,6 @@
                             %>
                             <td><%= anioTurno + "-" + mesTurno + "-" + diaTurno%></td>
                             <td><%= turno.getHoraTruno()%></td>
-                            <td><%= turno.getAfeccion()%></td>
                             <% if (turno.getPaciente() != null) {%>
                             <td><%= turno.getPaciente().getDni() + ", " + turno.getPaciente().getNombre() + ", " + turno.getPaciente().getApellido()%></td>
                             <% } else { %>

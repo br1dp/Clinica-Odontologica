@@ -16,9 +16,7 @@
         <div class="col-sm-6 mb-3">
             <input type="text" class="form-control form-control-user" name="horaTurno" placeholder="Hora turno (hh:mm)">
         </div>
-        <div class="col-sm-6 mb-3">
-            <input type="text" class="form-control form-control-user" name="afeccion" placeholder="Afeccion">
-        </div>
+        
 
         <div class="col-sm-6 mb-3">
             <button type="submit" class="btn btn-primary btn-user btn-block">

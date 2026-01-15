@@ -38,7 +38,8 @@ public class CrearUsuarioIndexServlet extends HttpServlet {
 
         cL.crearUsuario(nombre, password, rol);
         
-        Mensaje mensaje = cL.crearMensaje("Usuario creado", "El usuario fue creado exitosamente en la base de datos.");
+        Mensaje mensaje = cL.crearMensaje("Usuario creado", "El usuario fue creado exitosamente en la base de datos. \n "
+                + "Recuerde que debe ser APROBADO por el administrador.");
         session.setAttribute("mensaje", mensaje);
         
         response.sendRedirect("index.jsp");

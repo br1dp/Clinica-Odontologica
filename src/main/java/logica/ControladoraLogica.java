@@ -173,7 +173,7 @@ public class ControladoraLogica {
         return mensaje;
     }
 
-    public void crearPaciente(String dni, String nombre, String apellido, String telefono, String direccion, String fechaNac, int tieneOs, String tipoSangre, Responsable responsable) {
+    public void crearPaciente(String dni, String nombre, String apellido, String telefono, String direccion, String afeccion, String fechaNac, int tieneOs, String tipoSangre, Responsable responsable) {
 
         Paciente paciente = new Paciente();
         paciente.setDni(dni);
@@ -181,6 +181,7 @@ public class ControladoraLogica {
         paciente.setApellido(apellido);
         paciente.setTelefono(telefono);
         paciente.setDireccion(direccion);
+        paciente.setAfeccion(afeccion);
 
         if (!fechaNac.isEmpty()) {
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -242,7 +243,7 @@ public class ControladoraLogica {
 
     }
 
-    public void crearTurno(String fechaTurno, String horaTurno, String afeccion) {
+    public void crearTurno(String fechaTurno, String horaTurno) {
 
         Turno turno = new Turno();
         if (fechaTurno != null) {
@@ -256,11 +257,6 @@ public class ControladoraLogica {
             turno.setHoraTruno(horaTurno);
         } else {
             turno.setHoraTruno(null);
-        }
-        if (afeccion != null) {
-            turno.setAfeccion(afeccion);
-        } else {
-            turno.setAfeccion(null);
         }
 
         cP.crearTurno(turno);

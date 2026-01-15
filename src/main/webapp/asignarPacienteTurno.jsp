@@ -14,7 +14,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Asignar paciente al turno</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Seleccione al paciente</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -25,10 +25,11 @@
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Fecha Nacimiento</th>
+                            <th>Afeccion</th>
                             <th>Obra Social</th>
                             <th>Tipo de sangre</th>
                             <th>Responsable</th>
-                            <th style="width: 210px;">Accion</th>
+                            <th style="width: 230px;">Accion</th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -37,10 +38,11 @@
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Fecha Nacimiento</th>
+                            <th>Afeccion</th>
                             <th>Obra Social</th>
                             <th>Tipo de sangre</th>
                             <th>Responsable</th>
-                            <th style="width: 210px;">Accion</th>
+                            <th style="width: 230px;">Accion</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -58,6 +60,7 @@
                             <td><%= pac.getNombre()%></td>
                             <td><%= pac.getApellido()%></td>
                             <td><%= pac.getFechaNac()%></td>
+                            <td><%= pac.getAfeccion()%></td>
                             <% if (pac.isTieneOs()) {%>
                             <td>Si</td> <% } else { %>
                             <td>No</td> <% }%>
@@ -70,10 +73,10 @@
                             <td><%= pac.getResponsable().getNombre() + " " + pac.getResponsable().getApellido() + " Rol: " + "No asignado"%></td> 
                             <% }
                                 } %>
-                            <td style="display:flex; width:100px;">
-                                <form name="editar" action="AsignarPacienteTurno" method="GET">
-                                    <button type="submit" class="btn btn-primary btn-user btn-block">
-                                        <i class="fas fa-pencil-alt"></i> Ver Turnos
+                                <td style="display: flex; width: 150px;">
+                                <form name="verTurno" action="AsignarPacienteTurno" method="GET">
+                                    <button type="submit" class="btn btn-primary btn-user btn-block" style="text-align: center;">
+                                        <i class="fas fa-solid fa-plus"></i> Seleccionar
                                     </button>
                                     <input type="hidden" name="id" value="<%= pac.getId()%>">
                                 </form>

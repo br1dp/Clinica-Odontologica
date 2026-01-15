@@ -28,6 +28,9 @@
         <div class="col-sm-6 mb-3">
             <input type="text" class="form-control form-control-user" name="fechaNac" placeholder="Fecha de Nacimiento (DD/MM/AAAA)">
         </div>
+        <div class="col-sm-6 mb-3">
+            <input type="text" class="form-control form-control-user" name="afeccion" placeholder="Afeccion">
+        </div>
         <div>
             <h1 class="h5 text-gray-900" style="text-align: center; margin-bottom: 5px; margin-top: 5px;">¿Tiene Obra Social?</h1>
             <div style="height: 4px; width: 60px; background-color: #4e73df; margin: 10px auto; margin-bottom: 20px;"></div>

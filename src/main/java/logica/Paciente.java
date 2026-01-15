@@ -17,16 +17,26 @@ public class Paciente extends Persona implements Serializable {
     private List<Turno> listaTurnos;
     @OneToOne(cascade = CascadeType.REMOVE, orphanRemoval = true)
     private Responsable responsable;
+    private String afeccion;
 
     public Paciente() {
     }
 
-    public Paciente(boolean tieneOs, String tipoSangre, List<Turno> listaTurnos, Responsable responsable, int id, String dni, String nombre, String apellido, String telefono, String direccion, LocalDate fechaNac) {
+    public Paciente(boolean tieneOs, String tipoSangre, List<Turno> listaTurnos, Responsable responsable, String afeccion, int id, String dni, String nombre, String apellido, String telefono, String direccion, LocalDate fechaNac) {
         super(id, dni, nombre, apellido, telefono, direccion, fechaNac);
         this.tieneOs = tieneOs;
         this.tipoSangre = tipoSangre;
         this.listaTurnos = listaTurnos;
         this.responsable = responsable;
+        this.afeccion = afeccion;
+    }
+
+    public String getAfeccion() {
+        return afeccion;
+    }
+
+    public void setAfeccion(String afeccion) {
+        this.afeccion = afeccion;
     }
 
     public boolean isTieneOs() {
@@ -60,7 +70,5 @@ public class Paciente extends Persona implements Serializable {
     public void setResponsable(Responsable responsable) {
         this.responsable = responsable;
     }
-    
-    
-    
+
 }

@@ -7,7 +7,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import java.time.LocalDate;
 import java.util.List;
 import logica.ControladoraLogica;
 import logica.Mensaje;
@@ -52,11 +51,8 @@ public class TurnoServlet extends HttpServlet {
         if (!request.getParameter("horaTurno").isEmpty()) {
             horaTurno = request.getParameter("horaTurno");
         }
-        if (!request.getParameter("afeccion").isEmpty()) {
-            afeccion = request.getParameter("afeccion");
-        }
 
-        cL.crearTurno(fechaTurno, horaTurno, afeccion);
+        cL.crearTurno(fechaTurno, horaTurno);
         
         Mensaje mensaje = cL.crearMensaje("Gestion de turnos", "El turno fue creado exitosamente en la base de datos.");
         session.setAttribute("mensaje", mensaje);
