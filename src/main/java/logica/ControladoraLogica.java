@@ -288,4 +288,50 @@ public class ControladoraLogica {
         
     }
 
+    public void crearOdontologo(String dni, String nombre, String apellido, String telefono, String direccion, LocalDate fechaNacLocalDate, String especialidad, int idUsuario) {
+        
+        Odontologo odontologo = new Odontologo();
+        Usuario usuario = cP.traerUsuario(idUsuario);
+        odontologo.setUsuario(usuario);
+        odontologo.setDni(dni);
+        odontologo.setNombre(nombre);
+        odontologo.setApellido(apellido);
+        odontologo.setTelefono(telefono);
+        odontologo.setDireccion(direccion);
+        odontologo.setFechaNac(fechaNacLocalDate);
+        odontologo.setEspecialidad(especialidad);
+        
+        cP.crearOdontologo(odontologo);
+    
+    }
+
+    public List<Odontologo> traerOdontologos() {
+   
+        return cP.traerOdontologos();
+    
+    }
+
+    public void eliminarOdontologo(int idOdontologo) {
+   
+        cP.eliminarOdontologo(idOdontologo);
+        
+    }
+
+    public Odontologo traerOdontologo(int idOdontologo) {
+   
+        return cP.traerOdontologo(idOdontologo);
+        
+    }
+
+    public void editarOdontologo(Odontologo odontologo) {
+     
+        cP.editarOdontologo(odontologo);
+        
+    }
+
+    public List<Turno> traerTurnos() {
+    
+     return cP.traerTurnos();
+        
+    }
 }

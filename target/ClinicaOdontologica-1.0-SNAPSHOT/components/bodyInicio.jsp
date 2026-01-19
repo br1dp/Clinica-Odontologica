@@ -56,10 +56,10 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Acciones:</h6>
                             <% if (usuario.getRol().equals("SECRETARIO")) { %>
-                            <a class="collapse-item" href="buttons.html">Ver Odontologos</a>
+                            <a class="collapse-item" href="OdontologoServlet">Ver Odontologos</a>
                             <%} else {%>
                             <a class="collapse-item" href="altaOdontologo.jsp">Crear Odontologos</a>
-                            <a class="collapse-item" href="buttons.html">Ver Odontologos</a>
+                            <a class="collapse-item" href="OdontologoServlet">Ver Odontologos</a>
                             <% }; %>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                             <a class="collapse-item" href="TurnoServlet">Ver Turnos</a>
                             <% } else { %>
                             <a class="collapse-item" href="altaPaciente.jsp">Crear Pacientes</a>
-                            <a class="collapse-item" href="MenuTurnoServlet">Asignar Turnos</a>
+                            <a class="collapse-item" href="MenuTurnoServlet">Menu Turnos</a>
                             <a class="collapse-item" href="PacienteServlet">Ver Pacientes</a>
                             <% }; %>
                         </div>

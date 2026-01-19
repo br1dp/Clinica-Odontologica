@@ -25,12 +25,15 @@
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/persistencia/exceptions/IllegalOrphanException.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/persistencia/exceptions/NonexistentEntityException.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/persistencia/exceptions/PreexistingEntityException.java
+/home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/AsignarOdontologoTurno.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/AsignarPacienteTurno.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/CrearUsuarioIndexServlet.java
+/home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/EditarOdontologoServlet.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/EditarPaciente.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/EditarSecretarioServlet.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/EditarTurno.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/EditarUsuarioServlet.java
+/home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/EliminarOdontologoServlet.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/EliminarPaciente.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/EliminarSecretarioServlet.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/EliminarTurno.java
@@ -39,7 +42,10 @@
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/LogoutServlet.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/MenuServlet.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/MenuTurnoServlet.java
+/home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/OdontologoServlet.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/PacienteServlet.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/SecretarioServlet.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/TurnoServlet.java
 /home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/UsuarioServlet.java
+/home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/VerPacientesAsignarTurnoServlet.java
+/home/brunodp/Escritorio/JavaWebJSPyJPA /Clinica Odontologica/Clinica-Odontologica/src/main/java/servlets/VerTurnosDelPacienteServlet.java

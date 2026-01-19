@@ -23,9 +23,6 @@
             <input type="text" class="form-control form-control-user" name="horaTurno" placeholder="Hora turno (hh:mm)">
         </div>
         <div class="col-sm-6 mb-3">
-            <input type="text" class="form-control form-control-user" name="afeccion" placeholder="<%= turnoEditar.getAfeccion()%>">
-        </div>
-        <div class="col-sm-6 mb-3">
             <% if (turnoEditar.getPaciente() == null) {%>
             <label class="form-label d-block text-gray-800" style="text-align: center; text-decoration: underline;">Paciente</label>
             <span class="form-control-plaintext px-2 font-weight-bold" style="text-align: center;">

@@ -54,11 +54,7 @@
 
 
                                 <%
-
-                                    if (usuario.getNombreUsuario().equals("ADMIN")) {
-
-                                        if (!usu.getNombreUsuario().equals("ADMIN")) {
-
+                                    if (usuario.getRol().equals("ADMIN")) {
                                 %>
                                 <form name="eliminar" action="EliminarUsuarioServlet" method="POST">
                                     <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red;margin-right: 5px;">
@@ -72,7 +68,6 @@
                                     </button>
                                     <input type="hidden" name="id" value="<%= usu.getIdUsuario()%>">
                                 </form>
-                                <%}%>
                             </td>
                         </tr>
                         <%

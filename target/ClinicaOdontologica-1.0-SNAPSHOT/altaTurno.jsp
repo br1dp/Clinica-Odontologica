@@ -20,7 +20,7 @@
 
         <div class="col-sm-6 mb-3">
             <button type="submit" class="btn btn-primary btn-user btn-block">
-                Guardar Turno
+                Seleccionar paciente
             </button>
         </div>
 

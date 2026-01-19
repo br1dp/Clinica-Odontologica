@@ -82,7 +82,7 @@ public class EditarPaciente extends HttpServlet {
         }
 
         if (!request.getParameter("tipoSangre").equals("")) {
-            pacienteEditar.setDireccion(request.getParameter("direccion"));
+            pacienteEditar.setTipoSangre(request.getParameter("tipoSangre"));
         }
 
         if (!request.getParameter("dniResp").equals("")) {

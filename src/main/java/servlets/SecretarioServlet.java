@@ -30,7 +30,7 @@ public class SecretarioServlet extends HttpServlet {
         List<Secretario> listaSecretarios = cL.listarSecretarios();
 
         session.setAttribute("listaSecretarios", listaSecretarios);
-        
+
         response.sendRedirect("verSecretarios.jsp");
 
     }
@@ -38,9 +38,9 @@ public class SecretarioServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         HttpSession session = request.getSession();
-        
+
         String dni = request.getParameter("dni");
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
@@ -48,24 +48,13 @@ public class SecretarioServlet extends HttpServlet {
         String direccion = request.getParameter("direccion");
         String sector = request.getParameter("sector");
         String fechaNac = request.getParameter("fechaNac");
-        
+
         Usuario usuario = (Usuario) session.getAttribute("usuario");
-        
-        String nombreUsuario = usuario.getNombreUsuario();
-        String passwordUsuario = usuario.getPassword();
 
-        int idUsuario = cL.traerUsuario(nombreUsuario, passwordUsuario);
+        int idUsuario = usuario.getIdUsuario();
 
-        if (idUsuario != -1) {
-
-            cL.crearSecretario(dni, nombre, apellido, telefono, direccion, sector, fechaNac, idUsuario);
-            response.sendRedirect("SecretarioServlet");
-
-        } else {
-            
-            response.sendRedirect("altaSecretario.jsp");
-            
-        }
+        cL.crearSecretario(dni, nombre, apellido, telefono, direccion, sector, fechaNac, idUsuario);
+        response.sendRedirect("SecretarioServlet");
 
     }
 

@@ -77,11 +77,11 @@
                             <% }
                                 } %>
                             <td style="display:flex; width:350px;">
-                                <form name="listaTurnos" action="#" method="GET">
+                                <form name="listaTurnos" action="VerTurnosDelPacienteServlet" method="GET">
                                     <button type="submit" class="btn btn-primary btn-user btn-block">
                                         <i class="fas fa-list-alt"></i> Ver turnos
                                     </button>
-                                    <input type="hidden" name="id" value="<%= pac.getId()%>">
+                                    <input type="hidden" name="idPaciente" value="<%= pac.getId()%>">
                                 </form>
                                 <form name="eliminar" action="EliminarPaciente" method="POST">
                                     <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px; background-color:red;">

@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.util.List;
 import logica.ControladoraLogica;
-import logica.Mensaje;
+import logica.Paciente;
 import logica.Turno;
 
 @WebServlet(name = "TurnoServlet", urlPatterns = {"/TurnoServlet"})
@@ -41,7 +41,6 @@ public class TurnoServlet extends HttpServlet {
             
         HttpSession session = request.getSession();
         
-        String afeccion=null;
         String fechaTurno=null;
         String horaTurno=null;
         
@@ -51,13 +50,16 @@ public class TurnoServlet extends HttpServlet {
         if (!request.getParameter("horaTurno").isEmpty()) {
             horaTurno = request.getParameter("horaTurno");
         }
-
+        
         cL.crearTurno(fechaTurno, horaTurno);
+        List<Turno> listaTurnos = cL.listarTurnos();
+        int idTurno = listaTurnos.getLast().getIdTurno();
         
-        Mensaje mensaje = cL.crearMensaje("Gestion de turnos", "El turno fue creado exitosamente en la base de datos.");
-        session.setAttribute("mensaje", mensaje);
+        session.setAttribute("idTurno", idTurno);
         
-        response.sendRedirect("menuTurnos.jsp");
+        List<Paciente> listaPacientes = cL.listarPacientes();
+        session.setAttribute("listaPacientes", listaPacientes);
+        response.sendRedirect("asignarPacienteTurno.jsp");
         
 
     }

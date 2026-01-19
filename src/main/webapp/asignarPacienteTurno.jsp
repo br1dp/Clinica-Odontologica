@@ -1,4 +1,5 @@
 
+<%@page import="java.lang.Integer"%>
 <%@page import="logica.Paciente"%>
 <%@page import="logica.Secretario"%>
 <%@page import="java.util.List"%>
@@ -10,7 +11,8 @@
 
 
 <div class="container-fluid">
-
+    <% int idTurno = (Integer) session.getAttribute("idTurno"); %>
+    
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -78,7 +80,9 @@
                                     <button type="submit" class="btn btn-primary btn-user btn-block" style="text-align: center;">
                                         <i class="fas fa-solid fa-plus"></i> Seleccionar
                                     </button>
-                                    <input type="hidden" name="id" value="<%= pac.getId()%>">
+                                    <input type="hidden" name="idPaciente" value="<%= pac.getId()%>">
+                                    <input type="hidden" name="idTurno" value="<%= idTurno%>">
+                                    
                                 </form>
 
                             </td>

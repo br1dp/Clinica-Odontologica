@@ -55,7 +55,9 @@
 
                         %>
                         <tr>
-                            <%                                String diaTurno = String.valueOf(turno.getFechaTurno().getDayOfMonth());
+                            <%                                
+                                
+                                String diaTurno = String.valueOf(turno.getFechaTurno().getDayOfMonth());
                                 String mesTurno = String.valueOf(turno.getFechaTurno().getMonthValue());
                                 String anioTurno = String.valueOf(LocalDate.now().getYear());
                             %>

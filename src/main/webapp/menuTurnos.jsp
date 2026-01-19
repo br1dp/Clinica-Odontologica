@@ -24,18 +24,6 @@
         </a>
     </div>
     <div class="col-sm-6 mb-3">
-        <a href="asignarPacienteTurno.jsp"type="submit" class="btn btn-primary btn-user btn-block">
-            <i class="fas fa-solid fa-book-medical"></i>
-            Asignar Paciente
-        </a>
-    </div>
-    <div class="col-sm-6 mb-3">
-        <button type="submit" class="btn btn-primary btn-user btn-block">
-            <i class="fas fa-solid fa-teeth"></i>
-            Asignar Odontologo
-        </button>
-    </div>
-    <div class="col-sm-6 mb-3">
 
         <a href="TurnoServlet" type="submit" class="btn btn-primary btn-user btn-block">
             <i class="fas fa-regular fa-calendar"></i>

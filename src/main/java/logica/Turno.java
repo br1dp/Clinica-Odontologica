@@ -8,20 +8,21 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Entity
 public class Turno implements Serializable {
-    
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTurno;
     private LocalDate fechaTurno;
     private String horaTruno;
     @ManyToOne
-    @JoinColumn(name="idOdontologo")
+    @JoinColumn(name = "idOdontologo")
     private Odontologo odontologo;
     @ManyToOne
-    @JoinColumn(name="idPaciente")
+    @JoinColumn(name = "idPaciente")
     private Paciente paciente;
 
     public Turno() {
@@ -72,6 +73,5 @@ public class Turno implements Serializable {
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
     }
-    
-    
+
 }
